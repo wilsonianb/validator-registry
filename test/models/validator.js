@@ -1,15 +1,13 @@
-import Sails from 'sails'
+import 'sails-test-helper'
 import assert from 'assert'
 
 describe('Validator', () => {
-
-  before(done => Sails.lift(done))
 
   it('.create should persist to the database',done => {
 
     const validation_public_key = 'n9LigbVAi4UeTtKGHHTXNcpBXwBPdVKVTjbSkLmgJvTn6qKB8Mqz'
 
-    database.Validator.create({
+    database.Validators.create({
       validation_public_key: validation_public_key,
       domain: 'ripple.com'
     })

@@ -1,9 +1,7 @@
-import Sails from 'sails'
+import 'sails-test-helper'
 import assert from 'assert'
 
 describe('Validation', () => {
-
-  before(done => Sails.lift(done))
 
   it('.create should persist to the database',done => {
 
